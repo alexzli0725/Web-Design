@@ -2,16 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Topic Related to Genshin</title>
-  <link rel="stylesheet" href="./dist/topic.css" />
+  <link rel="stylesheet" href="./dist/topic.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <button tabindex="0" onclick="topFunction()" id="myBtn" title="Go to top">Back to the Top Menu</button>
-  <input class="side-menu" type="checkbox" id="side-menu" />
+  <button tabindex="0" onclick="topFunction()" id="myBtn" title="Go to top">
+    Back to the Top Menu
+  </button>
+  <input class="side-menu" type="checkbox" id="side-menu">
   <ul class="navbar">
     <li tabindex="0" class="indy">
       <label class="hamb" for="side-menu">
@@ -20,7 +22,9 @@
     </li>
     <li tabindex="0"><a href="./index.html">Visit the Homepage</a></li>
     <li tabindex="0"><a href="./index2.html">Explore More Article</a></li>
-    <li tabindex="0"><a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <li tabindex="0">
+      <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    </li>
     <li tabindex="0"><a href="#section2">Go to Section 2</a></li>
   </ul>
   <header>
@@ -30,12 +34,12 @@
   <main>
     <nav id="myDIV">
       <img src="https://pbs.twimg.com/profile_images/1698207326908686336/9yeLu-a8_400x400.jpg" alt="5 archons"
-        data-type="thumbnail" />
+        data-type="thumbnail">
       <img src="https://static.wikia.nocookie.net/66083795-8ddf-4dde-9bba-bcc10bb858ed/scale-to-width/755"
-        alt="5 archons in the past" data-type="full-size" />
+        alt="5 archons in the past" data-type="full-size">
     </nav>
-    <br />
-    <br />
+    <br>
+    <br>
     <article id="main-content">
       <h2>About</h2>
       <div id="main">
@@ -62,10 +66,8 @@
         <nav id="gameplaytrailer">
           <h3>Here's a very recent Gameplay Trailer!</h3>
           <video controls>
-            <source src="./Genshin_Impact-Fontaine_Gameplay_Trailer-Gamescom_2023.mp4" />
-            <track label="English" kind="subtitles" srclang="en"
-              src="./[English (United States)] Genshin Impact - Fontaine Gameplay Trailer｜Gamescom 2023 [DownSub.com].vtt"
-              default />
+            <source src="./Genshin_Impact-Fontaine_Gameplay_Trailer-Gamescom_2023.mp4">
+            <track label="English" kind="subtitles" srclang="en" src="./English_United_States_Genshin_Impact_Fontaine_Gameplay_Trailer_Gamescom_2023_DownSub.com.vtt" default>
           </video>
           <p></p>
           <p tabindex="0">
@@ -197,49 +199,62 @@
         <div class="item4">Tower of Fantasy</div>
       </div>
     </section>
-    <section style="margin-left:auto; margin-right:auto; background-color:white; border: 1px solid; max-width: 290px; margin-top: 17px">
+    <div style="
+          margin-left: auto;
+          margin-right: auto;
+          background-color: white;
+          border: 1px solid;
+          max-width: 290px;
+          margin-top: 17px;
+        ">
       <form style="text-align: center">
         <p style="font-weight: bold">Who's your favorite character?</p>
-        <input type="radio" id="html" name="fav_language" value="Navia">
+        <input type="radio" id="Navia" name="fav_character" value="Navia">
         <label for="Navia">Navia</label><br>
-        <input type="radio" id="css" name="fav_language" value="Furina">
+        <input type="radio" id="Furina" name="fav_character" value="Furina">
         <label for="Furina">Furina</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="Chiori">
+        <input type="radio" id="Chiori" name="fav_character" value="Chiori">
         <label for="Chiori">Chiori</label>
       </form>
-      <p style="text-align: center; font-weight: bold;">What's your server?</p>
-      <select style="display:flex; margin-left:auto; margin-right:auto" name="server">
+      <p style="text-align: center; font-weight: bold">What's your server?</p>
+      <select style="display: flex; margin-left: auto; margin-right: auto" name="server">
         <option value="Asia">Asia</option>
         <option value="Japan">Japan</option>
         <option value="Korea">Korea</option>
         <option value="Europe">Europe</option>
         <option value="North America">North America</option>
       </select>
-      <br />
-      <input type="button" style="display:flex; margin-left:auto; margin-right:auto" value="Submit"
+      <br>
+      <input type="button" style="display: flex; margin-left: auto; margin-right: auto" value="Submit"
         onclick="printSelection()">
       <p></p>
-      <div style="text-align:center; margin-left:auto; margin-right:auto; width: 260px; margin-bottom:10px" id="selectedCharacter"></div>
-    </section>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+      <div style="
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 260px;
+            margin-bottom: 10px;
+          " id="selectedCharacter"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <section id="section2">
       <h2>Seven Elements</h2>
       <ul>
-        <li><img src="./Element_Pyro.svg" alt="Pyro" width="45" /></li>
-        <li><img src="./Element_Hydro.svg" alt="Hydro" width="45" /></li>
-        <li><img src="./Element_Anemo.svg" alt="Anemo" width="45" /></li>
-        <li><img src="./Element_Electro.svg" alt="Electro" width="45" /></li>
-        <li><img src="./Element_Dendro.svg" alt="Dendro" width="45" /></li>
-        <li><img src="./Element_Cryo.svg" alt="Cryo" width="45" /></li>
-        <li><img src="./Element_Geo.svg" alt="Geo" width="45" /></li>
+        <li><img src="./Element_Pyro.svg" alt="Pyro" width="45"></li>
+        <li><img src="./Element_Hydro.svg" alt="Hydro" width="45"></li>
+        <li><img src="./Element_Anemo.svg" alt="Anemo" width="45"></li>
+        <li><img src="./Element_Electro.svg" alt="Electro" width="45"></li>
+        <li><img src="./Element_Dendro.svg" alt="Dendro" width="45"></li>
+        <li><img src="./Element_Cryo.svg" alt="Cryo" width="45"></li>
+        <li><img src="./Element_Geo.svg" alt="Geo" width="45"></li>
       </ul>
     </section>
   </main>

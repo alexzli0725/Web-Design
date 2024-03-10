@@ -45,6 +45,22 @@ document
   });
 
 document
+  .querySelectorAll("article #main2 #gameplaytrailer2 div")
+  .forEach(function (div) {
+    div.addEventListener("keydown", function (event) {
+      // Handle keyboard events
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        var link = div.querySelector("a");
+        if (link) {
+          link.setAttribute("target", "_blank");
+          window.open(link.getAttribute("href"), "_blank");
+        }
+      }
+    });
+  });
+
+document
   .querySelector(".navbar .indy")
   .addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
@@ -140,7 +156,7 @@ function toMyFunction() {
 }
 
 function printSelection() {
-  var favCharacter = document.querySelector('input[name="fav_language"]:checked').value;
+  var favCharacter = document.querySelector('input[name="fav_character"]:checked').value;
   var selectedServer = document.querySelector('select[name="server').value;
 
   document.getElementById("selectedCharacter").innerHTML = "Your favorite character is " + favCharacter + " and your server is " + selectedServer;
