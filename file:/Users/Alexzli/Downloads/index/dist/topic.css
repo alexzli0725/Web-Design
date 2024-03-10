@@ -1,0 +1,533 @@
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 50px;
+  background-color: rgb(215, 215, 215);
+}
+
+@media only screen and (min-width: 601px) {
+  label {
+    display: none;
+  }
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar .hamb {
+  cursor: pointer;
+  padding: 40px 20px;
+}
+
+.navbar .indy .hamb .hamb-line {
+  background-color: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 36px;
+}
+
+.navbar .indy .hamb .hamb-line::before,
+.navbar .indy .hamb .hamb-line::after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.navbar .indy .hamb .hamb-line::before {
+  top: 5px;
+}
+
+.navbar .indy .hamb .hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+}
+
+.side-menu:checked ~ .navbar .hamb .hamb-line {
+  background: transparent;
+  transition: background 0.2s ease;
+  -webkit-transition: background 0.2s ease;
+}
+
+.side-menu:checked ~ .navbar .hamb .hamb-line:before,
+.side-menu:checked ~ .navbar .hamb .hamb-line:after {
+  transition: transform 0.2s ease, top 0.2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease, top 0.2s ease;
+}
+
+.side-menu:not(:checked) ~ .navbar .hamb .hamb-line:before,
+.side-menu:not(:checked) ~ .navbar .hamb .hamb-line:after {
+  transition: transform 0.2s ease, top 0.2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease, top 0.2s ease;
+}
+
+.side-menu:checked ~ .navbar .hamb .hamb-line:before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  top: 0;
+}
+
+.side-menu:checked ~ .navbar .hamb .hamb-line:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media screen and (max-width: 904px) {
+  body header #mama {
+    border-bottom: 3px solid rgba(182, 181, 181, 0.902);
+    text-align: center;
+    -webkit-text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+
+  #myDIV {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    margin: 0 auto;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    width: 90%;
+    animation-fill-mode: forwards;
+    justify-content: space-between;
+  }
+
+  #myDIV img[data-type="thumbnail"],
+  #myDIV img[data-type="full-size"] {
+    width: auto;
+    max-width: 90%; /* Set max-width to 90% for both thumbnail and full-size images */
+  }
+
+  #myDIV img[data-type="thumbnail"] {
+    width: auto;
+    max-width: 90%;
+  }
+  
+  #myDIV img[data-type="full-size"] {
+    width: auto; /* Let the browser calculate the width based on the aspect ratio */
+    max-width: 90%;
+  }
+
+
+  #main #line {
+    display: block;
+    width: 90vw;
+    height: 1px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #main2 #line2 {
+    display: block;
+    height: 1px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  nav > img:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  article {
+    background-color: rgb(249, 238, 216);
+    height: -moz-fit-content;
+    height: fit-content;
+    border-style: dotted;
+    border-radius: 10px;
+  }
+
+  article #main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article #main2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article #main #even_paragraph {
+    max-width: 90%;
+  }
+
+  article #main2 #even_paragraph2 {
+    max-width: 90%;
+  }
+
+  article #main #gameplaytrailer img {
+    max-width: 90%;
+  }
+
+  #table td {
+    flex: 0 0 49.1%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    margin: 3px;
+  }
+
+  #gameplaytrailer video {
+    width: 450px;
+    max-width: 90%;
+  }
+
+  #gameplaytrailer2 img {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 601px) {
+  body .navbar li a {
+    display: none;
+  }
+
+  .side-menu:checked ~ .navbar {
+    height: 144px;
+    transition: height 0.2s ease; /* Transition height over 2 seconds */
+    -webkit-transition: height 0.2s ease;
+    z-index: 99;
+  }
+
+  .side-menu:not(:checked) ~ .navbar {
+    height: 50px;
+    transition: height 0.2s ease; /* Transition height over 2 seconds */
+    -webkit-transition: height 0.2s ease;
+    z-index: 99;
+  }
+
+  .side-menu:checked ~ .navbar li {
+    float: none;
+  }
+
+  .side-menu:checked ~ .navbar li a {
+    display: flex;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 460px) {
+  #table {
+    display: block;
+    width: 100%;
+  }
+
+  #table tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  #table td {
+    flex: 0 0 32.7%;
+    -webkit-flex: 0 0 32.7%;
+    box-sizing: border-box;
+    margin: 1px;
+  }
+}
+
+@media only screen and (max-width: 332px) {
+  #section2 ul {
+    margin-left: -40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+  }
+}
+
+@media only screen and (max-width: 238px) {
+  #table td {
+    flex: 0 0 49.1%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    margin: 0px;
+  }
+}
+
+.navbar li a {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #6d6d6d;
+}
+
+#section2 ul {
+  display: grid;
+  padding-inline-start: 0; /* Remove default list padding */
+  grid-template-columns: repeat(auto-fit,minmax(30px,1fr));
+  max-width: 320px;
+  margin: 0 auto;
+  place-items: center;
+  list-style-type: none;
+}
+
+body {
+  background: linear-gradient(rgb(165, 252, 255), white);
+}
+
+table {
+  border: 1px solid black;
+  background-color: aquamarine;
+  border-radius: 5px;
+  border-spacing: 5px;
+  width: 25.5cm;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#table {
+  justify-content: center;
+  -webkit-text-align: center;
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
+  padding: 9px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.sameGame {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  padding: 10px;
+  place-items: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.sameGame > div {
+  padding: 10px;
+  width: 89%;
+  border: 1px solid black;
+  border-radius: 7px;
+  text-align: center;
+  background-color: white;
+}
+
+nav img {
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mama {
+  border-bottom: 3px solid rgba(182, 181, 181, 0.902);
+  width: 80%;
+  text-align: center;
+  -webkit-text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+article {
+  background-color: rgb(249, 238, 216);
+  width: 100%;
+  border-style: dotted;
+  border-radius: 10px;
+}
+
+article #main {
+  display: flex;
+  justify-content: space-around;
+}
+
+article #main2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+article #main #even_paragraph {
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article #main #even_paragraph p {
+  width: 8cm;
+  max-width: 90%;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article #main2 #even_paragraph2 {
+  width: 10cm;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article #main #gameplaytrailer {
+  text-align: center;
+  -webkit-text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 17px;
+}
+
+article #main2 #gameplaytrailer2 {
+  -webkit-text-align: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 17px;
+}
+
+#line {
+  width: 1px;
+  height: 450px;
+  background-color: black;
+  margin-bottom: 23px;
+}
+
+#line2 {
+  width: 1px;
+  height: 540px;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+  -webkit-text-align: center;
+  padding-top: 15px;
+}
+
+video {
+  border-radius: 12px;
+  width: 389px;
+  max-width: 90%;
+  box-shadow: 5px 5px 10px #b38b41;
+}
+
+section {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #b38b41;
+  font-size: large;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e9c278;
+}
+
+footer {
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-align: center;
+  -webkit-text-decoration: underline double;
+  text-decoration: underline double;
+}
+
+td {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+#myDIV {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin: 0 auto;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  width: 90%;
+  animation-fill-mode: forwards;
+  justify-content: space-evenly; /* Evenly distribute space between grid items horizontally */
+}
+
+#myDIV img[data-type="thumbnail"],
+#myDIV img[data-type="full-size"] {
+  align-self: center; /* Vertically center the images */
+}
+
+#myDIV img[data-type="thumbnail"] {
+  width: auto; /* Let the browser calculate the width based on the aspect ratio */
+  max-width: 320px; /* Set maximum width */
+}
+
+#myDIV img[data-type="full-size"] {
+  width: auto; /* Let the browser calculate the width based on the aspect ratio */
+  max-width: 380px; /* Set maximum width */
+
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    
+  }
+
+  from {
+    margin-top: 5%;
+    z-index: -1;
+  }
+
+  to {
+    z-index: 0;
+    width:90%;
+  }
+}
+
+video {
+  border-radius: 12px;
+  animation: fadeInAnimation2 ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+  from {
+    margin-left: -250%;
+    z-index: -1;
+  }
+
+  to {
+    z-index: 0;
+  }
+}
